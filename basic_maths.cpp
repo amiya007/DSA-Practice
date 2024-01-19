@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 void extraction_of_digits_and_no_of_digit_recursion(int n, int &count)
@@ -30,13 +31,56 @@ void extraction_of_digits_and_no_of_digit_loop(int n)
     cout << "No of Digits " << count;
 }
 
+int reverseTheNumber(int n)
+{
+    // If ending with "0" ignore
+    int reversedNumber = 0;
+    while (n > 0)
+    {
+        reversedNumber = reversedNumber * 10;
+        reversedNumber += n % 10;
+        n = n / 10;
+    }
+
+    return reversedNumber;
+}
+
+bool isPallindrome(int n)
+{
+    if (n == reverseTheNumber(n))
+    {
+        return true;
+    }
+    return false;
+}
+
+bool isArmstrongNumber(int n)
+{
+    int copy_n = n;
+    int cubeSum = 0;
+    while (n > 0)
+    {
+        cubeSum += pow(n % 10, 3);
+        n = n / 10;
+    }
+    if (copy_n == cubeSum)
+        return true;
+    return false;
+}
+
+void printDivisorsOfaNumber(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+            cout << i << "\n";
+    }
+}
 int main()
 {
     int count = 0;
     int x;
     cin >> x;
-    // extraction_of_digits_and_no_of_digit_recursion(x, count);
-    // cout << "\nNo of Digits " << count;
-    extraction_of_digits_and_no_of_digit_loop(x);
+    printDivisorsOfaNumber(x);
     return 0;
 }
