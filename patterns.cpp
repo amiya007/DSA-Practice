@@ -181,11 +181,11 @@ void pattern13(int n)
     {
         for (int j = 1; j <= n; j++)
         {
-            j <= i ? cout << "*" : cout << " ";
+            j <= i ? cout << j : cout << " ";
         }
         for (int j = n; j > 0; j--)
         {
-            j <= i ? cout << "*" : cout << " ";
+            j <= i ? cout << j : cout << " ";
         }
         cout << "\n";
     }
@@ -204,12 +204,54 @@ void pattern14(int n)
         cout << "\n";
     }
 }
+void pattern15(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            i == 1 || i == n ? cout << "*" : j == 1 || j == n ? cout << "*"
+                                                              : cout << " ";
+        }
+        cout << "\n";
+    }
+}
 
+void pattern16(int n)
+// Cross Pattern(X)
+{
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int count = 1;
+        for (int j = 1; j <= 2 * n - 1; j++)
+        {
+            i == count || i == 2 * n - count ? j == count || j == 2 * n - count ? cout << count : cout << " " : cout << " ";
+            count++;
+        }
+
+        cout << "\n";
+    }
+}
+void pattern17(int n)
+{
+    int count = 1;
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int count = 1;
+        for (int j = 1; j <= 2 * n - 1; j++)
+        {
+            i == count || i == 2 * n - count || j == count || j == 2 * n - count ? cout << n : cout << " ";
+            count++;
+        }
+
+        cout << "\n";
+    }
+}
 int main()
 {
     int x;
     cin >> x;
-    pattern13(x);
+    pattern17(x);
 
     return 0;
 }
