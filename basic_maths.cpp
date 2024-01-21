@@ -76,11 +76,25 @@ void printDivisorsOfaNumber(int n)
             cout << i << "\n";
     }
 }
+
+void isPrime(int n)
+{
+    int count = 0;
+    for (int i = 1; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+            count++;
+    }
+    count == 1 ? cout << "Prime Number" : cout << "Not a Prime Number";
+}
+
 int main()
 {
     int count = 0;
     int x;
     cin >> x;
-    printDivisorsOfaNumber(x);
+    // isPrime(x);
+    int positiveNumber = static_cast<unsigned int>(x);
+    cout << positiveNumber;
     return 0;
 }
