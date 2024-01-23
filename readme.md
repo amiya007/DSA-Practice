@@ -22,7 +22,7 @@
 # Sorting
 
 - ## **Selection sort**
-  --hiiiiiii
+  - hiiiiiii
 - Bubble sort (Normal / Recursive)
 - Insertion sort (Normal / Recursive)
 - Merge sort

@@ -43,7 +43,7 @@ int sumOfN_numbers(int n)
     return 0;
 }
 
-void swapArray(int arr[], int l, int r, int size)
+void reverseArray(int arr[], int l, int r, int size)
 {
 
     // cout << "size " << size;
@@ -61,7 +61,7 @@ void swapArray(int arr[], int l, int r, int size)
             cout << arr[i] << " ";
         }
         cout << endl;
-        swapArray(arr, l, r, size);
+        reverseArray(arr, l, r, size);
     }
     else
     {
@@ -79,7 +79,7 @@ int main()
     // cout << endl;
     // recursion_nto1(x);
     // cout << sumOfN_numbers(x) << endl;
-    swapArray(a, 0, 8, 9);
+    reverseArray(a, 0, 8, 9);
 
     return 0;
 }
