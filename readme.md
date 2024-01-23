@@ -21,8 +21,8 @@
 
 # Sorting
 
-- Selection sort
-  -- hiiiiiiiiii
+- ## **Selection sort**
+  --hiiiiiii
 - Bubble sort (Normal / Recursive)
 - Insertion sort (Normal / Recursive)
 - Merge sort
