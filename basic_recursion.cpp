@@ -56,15 +56,20 @@ void reverseArray(int arr[], int l, int r, int size)
 
         l++;
         r--;
-        for (int i = 0; i < size; i++)
-        {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
+        // TO track the changes
+        // for (int i = 0; i < size; i++)
+        // {
+        //     cout << arr[i] << " ";
+        // }
+        // cout << endl;
         reverseArray(arr, l, r, size);
     }
     else
     {
+        for (int i = 0; i < size; i++)
+        {
+            cout << arr[i] << " ";
+        }
         return;
     }
 }
@@ -72,7 +77,7 @@ void reverseArray(int arr[], int l, int r, int size)
 int main()
 {
     int x;
-    int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int a[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
     cin >> x;
     int count = 0;
     // recursion_1Ton(x, count);
