@@ -32,10 +32,45 @@
 # Sorting
 
 - ## **Selection sort**
-  - To perform SELECTION SORT we have to follow ony 2 steps,
-    1. Select minimum.
-    2. Swap with the related index.
-- Bubble sort (Normal / Recursive)
-- Insertion sort (Normal / Recursive)
-- Merge sort
-- Quick sort
+- Selection Method is to push the smallest element to the initial and keep itrating with the remaining elements in the array.
+- To perform SELECTION SORT we have to follow ony 2 steps:-
+
+  1. Select minimum.
+  2. Swap with the related index.
+
+- Complexity:-
+
+  - Best Case - `O()`
+  - Worst Case -`O()`
+
+- ## **Bubble sort (Normal / Recursive)**
+
+- Bubble Method is to push the largeest element to the last by adjecent swaps and keep itrating adjecent elements in the array.
+
+- To perform BUBBLE SORT we have to follow any 2 steps:-
+
+  1. Swap the adjecent elements from the start and push the last element to the last.
+  2. Swap with the related index.
+
+- Complexity:-
+
+  - Best Case - `O()`
+  - Worst Case -`O()`
+
+- ## **Intertion sort (Normal / Recursive)**
+- It takes an element and put it to its correct position. Starting from either from the first or from last.
+
+- Complexity:-
+
+  - Best Case - <code>O(n<sup>2</sup>)</code>
+  - Worst Case - <code>O(n<sup>2</sup>)</code>
+
+- ## **Merge sort**
+- Its is a better sorting method than above methods w.r.t Time Complexity.
+
+- Complexity:-
+
+  - Best Case - `O()`
+  - Worst Case -`O()`
+
+- ## **Quick sort**
