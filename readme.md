@@ -40,8 +40,8 @@
 
 - Complexity:-
 
-  - Best Case - `O()`
-  - Worst Case -`O()`
+  - Best Case - `O(n)`
+  - Worst Case - <code>O(n<sup>2</sup>)</code>
 
 - ## **Bubble sort (Normal / Recursive)**
 
@@ -54,8 +54,8 @@
 
 - Complexity:-
 
-  - Best Case - `O()`
-  - Worst Case -`O()`
+  - Best Case - `O(n)`
+  - Worst Case - <code>O(n<sup>2</sup>)</code>
 
 - ## **Intertion sort (Normal / Recursive)**
 - It takes an element and put it to its correct position. Starting from either from the first or from last.
@@ -67,10 +67,13 @@
 
 - ## **Merge sort**
 - Its is a better sorting method than above methods w.r.t Time Complexity.
+- In this method we have to convert the array to nearly equal to 2 half hypothetically ( Here the time complexity is `O(log(n))` ) and arrange them in a sorted way using anothe function `( here merge() )` having the time complecity of `O(n)`
 
 - Complexity:-
 
   - Best Case - `O()`
-  - Worst Case -`O()`
+  - Worst Case -`O(n log(n))`
+
+- Space Complexity - `O(n)`
 
 - ## **Quick sort**
