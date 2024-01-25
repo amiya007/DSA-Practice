@@ -102,6 +102,36 @@ void merge_sort(int arr[], int low, int high)
     merge(arr, low, high, mid);
 }
 
+int getPivot(int arr[], int low, int high)
+{
+    int pivotPoint = arr[low];
+    int i = low;
+    int j = high;
+    while (i < j)
+    {
+        while (arr[i] <= pivotPoint && i <= high - 1)
+        {
+            i++;
+        }
+        while (arr[j] > pivotPoint && j >= low + 1)
+        {
+            j--;
+        }
+        if (i < j)
+            swap(arr[i], arr[j]);
+    }
+    swap(arr[low], arr[j]);
+    return j;
+}
+void quick_sort(int arr[], int low, int high)
+{
+    if (low < high)
+    {
+        int pivotPoint = getPivot(arr, low, high);
+        quick_sort(arr, low, pivotPoint - 1);
+        quick_sort(arr, pivotPoint + 1, high);
+    }
+}
 int main()
 {
     int length;
@@ -112,7 +142,7 @@ int main()
         cin >> a[i];
     }
 
-    merge_sort(a, 0, length - 1);
+    quick_sort(a, 0, length - 1);
     cout << endl;
     for (int i = 0; i < length; i++)
     {

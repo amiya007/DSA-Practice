@@ -49,8 +49,8 @@
 
 - To perform BUBBLE SORT we have to follow any 2 steps:-
 
-  1. Swap the adjecent elements from the start and push the last element to the last.
-  2. Swap with the related index.
+  1. Swap the adjecent elements from the start and push the largest element to the last.
+  2. Follow the same step till the array get sorted.
 
 - Complexity:-
 
@@ -66,6 +66,7 @@
   - Worst Case - <code>O(n<sup>2</sup>)</code>
 
 - ## **Merge sort**
+- it is a devide and solve method.
 - Its is a better sorting method than above methods w.r.t Time Complexity.
 - In this method we have to convert the array to nearly equal to 2 half hypothetically ( Here the time complexity is `O(log(n))` ) and arrange them in a sorted way using anothe function `( here merge() )` having the time complecity of `O(n)`
 
@@ -77,3 +78,19 @@
 - Space Complexity - `O(n)`
 
 - ## **Quick sort**
+- It is slight better than merge sort in comapre to the Space Complexity.
+- it is a devide and solve method.
+- To perform QUICK SORT we have to follow any 2 steps:-
+
+  1. Pick a PIVOT Point.
+     - Pivot point could be at any point at starting, at end, at median or at any random index.
+  2. Put the Pivot element at its sorted index.
+  3. To put it on its sorted index, we have to put all the smaller elements at left side and larger elements on its right for ascending order and opposite for decending order.
+  4. Perform the same operation for the pivot point of different elements.
+
+- Complexity:-
+
+  - Best Case - `O()`
+  - Worst Case -`O(n log(n))`
+
+- Space Complexity - `O(1)`
