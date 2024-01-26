@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int largestElementInArray(int arr[], int size)
@@ -14,6 +15,7 @@ int largestElementInArray(int arr[], int size)
 
     return largest;
 }
+
 int secondLargestElementInArray(int arr[], int size)
 {
     int largest = arr[0];
@@ -29,6 +31,97 @@ int secondLargestElementInArray(int arr[], int size)
     return sLargest;
 }
 
+bool sortedOrNot(int arr[], int length)
+{
+
+    for (int i = 0; i < length; i++)
+    {
+        if (arr[i] > arr[i + 1])
+            return false;
+    }
+    return true;
+}
+
+void removeDuplicate(int arr[], int size)
+{
+    int count = 0;
+    vector<int> nonDuplicate = {};
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i - 1] != arr[i])
+        {
+            cout << arr[i] << endl;
+            nonDuplicate.push_back(arr[i]);
+            count++;
+        }
+    }
+    cout << "Count:" << count << endl;
+    for (int i = 0; i < nonDuplicate.size(); i++)
+    {
+        cout << nonDuplicate[i] << " ";
+    }
+}
+
+void shiftByPlaces(int arr[], int size, int shiftNo)
+{
+    if (shiftNo < size)
+    {
+        vector<int> shiftArray = {};
+        for (int i = 0; i < shiftNo; i++)
+        {
+            shiftArray.push_back(arr[i]);
+        }
+        for (int i = shiftNo - 1; i < size; i++)
+        {
+            arr[i - shiftNo] = arr[i];
+        }
+        for (int i = 0; i < shiftArray.size(); i++)
+        {
+            arr[size - shiftNo + i] = shiftArray[i];
+        }
+    }
+    else
+    {
+        cout << "Wrong shifting value";
+    }
+}
+
+void move_zeros_to_end(int arr[], int size)
+{
+    int i = 0;
+    int j = size - 1;
+    while (i < j)
+    {
+        if (arr[j] == 0)
+        {
+            j--;
+        }
+        else
+        {
+            if (arr[i] == 0)
+            {
+                swap(arr[i], arr[j]);
+                j--;
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+        }
+    }
+}
+
+// void unionOfTwoArray(vector<int> a, vector<int> b)
+// {
+//     vector<int> unionArray = {};
+    
+//     for (int i = 0; i < unionArray.size(); i++)
+//     {
+//         cout << unionArray[i] << " ";
+//     }
+// }
+
 int main()
 {
     int length;
@@ -38,8 +131,10 @@ int main()
     {
         cin >> a[i];
     }
-    cout << secondLargestElementInArray(a, length);
-
+    vector<int> x = {1, 2, 3, 4, 5};
+    vector<int> y = {1, 2, 3, 4, 5, 6};
+    // move_zeros_to_end(a, length);
+    // unionOfTwoArray(x, y);
     cout << endl;
     // for (int i = 0; i < length; i++)
     // {

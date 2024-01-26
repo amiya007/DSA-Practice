@@ -91,7 +91,6 @@ void merge(int arr[], int low, int high, int mid)
         cout << arr[i] << " ";
     }
 }
-
 void merge_sort(int arr[], int low, int high)
 {
     if (low == high)
@@ -132,6 +131,7 @@ void quick_sort(int arr[], int low, int high)
         quick_sort(arr, pivotPoint + 1, high);
     }
 }
+
 int main()
 {
     int length;
