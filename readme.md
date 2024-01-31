@@ -94,3 +94,11 @@
   - Worst Case -`O(n log(n))`
 
 - Space Complexity - `O(1)`
+
+# Hashing
+
+- It is a technique of prestoring and fetching.
+- Hash provides better synchronization than other data structures.
+- Hash tables are more efficient than search trees or other data structures.
+- Hash provides constant time for searching, insertion and deletion operations on average.
+- Hash tables are space-efficient.
