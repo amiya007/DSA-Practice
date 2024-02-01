@@ -115,12 +115,53 @@ void move_zeros_to_end(int arr[], int size)
 // void unionOfTwoArray(vector<int> a, vector<int> b)
 // {
 //     vector<int> unionArray = {};
-    
+
 //     for (int i = 0; i < unionArray.size(); i++)
 //     {
 //         cout << unionArray[i] << " ";
 //     }
 // }
+
+int max_consicutive_of_1(int arr[], int size)
+{
+    int count = 0;
+    int maxCount = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == 1)
+        {
+            count++;
+        }
+        else
+        {
+            count = 0;
+        }
+
+        if (count > maxCount)
+        {
+            maxCount = count;
+        }
+    }
+
+    return maxCount;
+}
+
+void num_appear_once(int arr[], int size)
+{
+    int hash[25] = {0};
+    for (int i = 0; i < size; i++)
+    {
+        hash[arr[i]] += 1;
+    }
+    for (int i = 0; i < 25; i++)
+    {
+        if (hash[i] == 1)
+        {
+            cout << i;
+        }
+    }
+}
+
 
 int main()
 {
@@ -131,11 +172,13 @@ int main()
     {
         cin >> a[i];
     }
-    vector<int> x = {1, 2, 3, 4, 5};
-    vector<int> y = {1, 2, 3, 4, 5, 6};
+    // vector<int> x = {1, 2, 3, 4, 5};
+    // vector<int> y = {1, 2, 3, 4, 5, 6};
     // move_zeros_to_end(a, length);
     // unionOfTwoArray(x, y);
+    cout << max_consicutive_of_1(a, length);
     cout << endl;
+    num_appear_once(a, length);
     // for (int i = 0; i < length; i++)
     // {
     //     cout << a[i] << " ";
