@@ -162,7 +162,6 @@ void num_appear_once(int arr[], int size)
     }
 }
 
-
 int main()
 {
     int length;
