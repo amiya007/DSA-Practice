@@ -158,7 +158,7 @@ int rotatedSorted_Array_Search(int arr[], int size, int target)
     {
         int mid = (low + high) / 2;
 
-        if (arr[mid] == target )
+        if (arr[mid] == target)
         {
             return mid;
         }
@@ -179,6 +179,32 @@ int rotatedSorted_Array_Search(int arr[], int size, int target)
     return -1;
 }
 
+int rotatedSorted_Array_Duplication_Search(int arr[], int size, int target)
+{
+    int low = 0;
+    int high = size - 1;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+
+        if (arr[mid] == arr[low] && arr[mid] == arr[high])
+        {
+            low = low + 1;
+            high = high - 1;
+            continue;
+        }
+        else if (arr[mid] < arr[low] && arr[mid] < arr[target])
+        {
+            high = mid - 1;
+        }
+        else
+        {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}
+
 int main()
 {
     int length;
@@ -189,8 +215,9 @@ int main()
         cin >> a[i];
     }
 
-    cout << rotatedSorted_Array_Search(a, length, 1) << endl;
+    cout << rotatedSorted_Array_Duplication_Search(a, length, 1) << endl;
     // cout << lastOccurence_using_BS(a, length, 1);
+
     cout << endl;
 
     return 0;
