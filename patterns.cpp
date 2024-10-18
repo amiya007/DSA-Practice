@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // int recursionBinarySearch(int a, int target, int n)
@@ -247,11 +247,24 @@ void pattern17(int n)
         cout << "\n";
     }
 }
+
+void numberCrown(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+            cout << j == i ? j : " ";
+        for (int k = n - 1; k >= 0; k--)
+            cout << k == i ? k : " ";
+        cout << endl;
+    }
+}
+
 int main()
 {
     int x;
     cin >> x;
-    pattern17(x);
+    numberCrown(x);
 
     return 0;
 }

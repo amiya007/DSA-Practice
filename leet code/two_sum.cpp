@@ -4,8 +4,7 @@
 
 // You can return the answer in any order.
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> twoSum(vector<int> &nums, int target)
@@ -38,6 +37,8 @@ int main()
     vector<int> x = {1, 5, 0, 0};
     vector<int> y;
     y = twoSum(x, 0);
+    unordered_map<int, int> x;
+    
     cout << y[0];
     cout << y[1];
     return 0;
